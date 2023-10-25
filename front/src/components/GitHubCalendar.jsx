@@ -9,7 +9,6 @@ const Calendar = (props) => {
         return contributions.filter((activity) => {
             const date = new Date(activity.date);
             const monthOfDay = date.getMonth();
-            console.log(date);
             return date.getFullYear() === currentYear && monthOfDay > currentMonth - shownMonths && monthOfDay <= currentMonth;
         });
     };
