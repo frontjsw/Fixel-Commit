@@ -14,20 +14,34 @@ const Calendar = (props) => {
     };
 
     return (
-        <CalendarCustom
-            // 깃허브 계정
-            username={props.githubId}
-            // 사이즈 조정
-            blockSize={40}
-            transformData={selectLastHalfYear}
-            style={{}}
-            hideTotalCount={true}
-            hideMonthLabels={true}
-            hideColorLegend={true}
-        />
+        <Wrapper>
+            <CalendarCustom
+                // 깃허브 계정
+                username={props.githubId}
+                // 사이즈 조정
+                blockSize={20}
+                transformData={selectLastHalfYear}
+                style={{}}
+                hideTotalCount={true}
+                hideMonthLabels={true}
+                hideColorLegend={true}
+            />
+        </Wrapper>
     );
 };
 
 export default Calendar;
 
-const CalendarCustom = styled(GitHubCalendar)``;
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #efe4e4;
+`;
+
+const CalendarCustom = styled(GitHubCalendar)`
+    width: 100%;
+`;

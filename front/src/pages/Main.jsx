@@ -4,7 +4,7 @@ import Calendar from '../components/GitHubCalendar';
 const MainPage = () => {
     return (
         <>
-            <Calendar githubId={'frontjsw'} />
+            <Calendar githubId={'gongzone'} />
         </>
     );
 };
